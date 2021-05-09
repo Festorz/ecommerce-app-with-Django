@@ -12,11 +12,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
-import django_heroku
 import dj_database_url
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -135,10 +135,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-#
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Ecommerce/media')
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "staticfiles")]
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static-cdn-local")
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
@@ -167,7 +169,6 @@ COMMERCE_TITLE_MAX_LENGTH = 20
 
 ACCOUNT_FORMS = {'signup': 'Commerce.forms.RegistrationForm'}
 
-
 proxy = 'http://10.XX.XX.XX:8X8X'  # your own proxy 'http://<user>:<pass>@<proxy>:<port>'
 
 os.environ['http_proxy'] = proxy
@@ -186,14 +187,14 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 AUTH_USER_MODEL = 'Commerce.User'
 
-CORS_REPLACE_HTTPS_REFERER = False
+CORS_REPLACE_HTTPS_REFERER = True
 HOST_SCHEME = "https://"
-SECURE_PROXY_SSL_HEADER = None
-SECURE_SSL_REDIRECT = False
-SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
-SECURE_HSTS_SECONDS = None
-SECURE_HSTS_INCLUDE_SUBDOMAINS = False
-SECURE_FRAME_DENY = False
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_SECONDS = 1000000
+SECURE_FRAME_DENY = True
 
 django_heroku.settings(locals())

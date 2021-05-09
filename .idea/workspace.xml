@@ -279,17 +279,21 @@
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="Procfile" value="2" />
           <entry key="py" value="1" />
+          <entry key="txt" value="1" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Python" value="1" />
           <entry key="XML" value="1" />
         </counts>
@@ -304,7 +308,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ecommerce/settings/production.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="3009">
               <caret line="180" selection-start-line="180" selection-end-line="180" />
               <folding>
                 <element signature="e#310#319#0" expanded="true" />
@@ -313,11 +317,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Commerce/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="210" selection-start-line="210" selection-end-line="210" />
+            <state relative-caret-position="83">
+              <caret line="233" column="5" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -357,7 +370,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Commerce/mpesa.py" />
         <option value="$PROJECT_DIR$/Commerce/templates/order_snippet.html" />
         <option value="$PROJECT_DIR$/Commerce/templates/checkout-page.html" />
         <option value="$PROJECT_DIR$/Commerce/templates/account/signup.html" />
@@ -371,7 +383,6 @@
         <option value="$PROJECT_DIR$/Commerce/api/serializers.py" />
         <option value="$PROJECT_DIR$/Commerce/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/Commerce/mpesacode.py" />
-        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/Commerce/mpesa/lipanampesa.py" />
         <option value="$PROJECT_DIR$/Commerce/mpesa/trialll.py" />
         <option value="$PROJECT_DIR$/samples/funcy.py" />
@@ -408,6 +419,8 @@
         <option value="$PROJECT_DIR$/Ecommerce/settings/__init__.py" />
         <option value="$PROJECT_DIR$/Commerce/templates/home-page.html" />
         <option value="$PROJECT_DIR$/Commerce/templates/my_account.html" />
+        <option value="$PROJECT_DIR$/Procfile.txt" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -1030,8 +1043,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49526066" visible="true" weight="0.15128593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49526066" visible="true" weight="0.15355521" />
       <window_info id="Structure" order="1" sideWeight="0.5035629" side_tool="true" weight="0.20801815" />
       <window_info id="Favorites" order="2" sideWeight="0.50163937" side_tool="true" weight="0.18986385" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1047,7 +1061,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.15737705" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3295082" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49924356" weight="0.5098361" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49924356" visible="true" weight="0.27377048" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1117,8 +1131,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="final_touches" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Phonetrial.py" />
-    <entry file="file://$PROJECT_DIR$/Commerce/speech.py" />
     <entry file="file://$PROJECT_DIR$/Commerce/static/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1330,7 +1342,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml" />
     <entry file="file://$PROJECT_DIR$/Ecommerce/settings/production.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="3009">
           <caret line="180" selection-start-line="180" selection-end-line="180" />
           <folding>
             <element signature="e#310#319#0" expanded="true" />
@@ -1354,8 +1366,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Commerce/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="210" selection-start-line="210" selection-end-line="210" />
+        <state relative-caret-position="83">
+          <caret line="233" column="5" selection-start-line="233" selection-start-column="5" selection-end-line="233" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
         </state>
       </provider>
     </entry>

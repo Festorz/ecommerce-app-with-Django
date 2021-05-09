@@ -1,0 +1,8 @@
+{% extends 'home-page.html'%}
+{% load i18n %}
+{% load account %}
+
+{% user_display user as user_display %}
+<div class="container mt-4">
+<p><strong>{% trans "Note" %}:</strong> {% blocktrans %}you are already logged in as {{ user_display }}.{% endblocktrans %}</p>
+</div>

@@ -1,0 +1,68 @@
+{% extends 'home-page.html' %}
+{% block head_title %}Seller - {{seller.username}} {% endblock%}
+
+{% block alert %}
+<div class="mt-5 pt-4">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
+{% block content %}
+<main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-md-12 mb-4">
+                <div class="text-center">
+                    <img src="{{seller.profile_picture.url}}" class="rounded" alt="..."
+                         style="width: 240px; height: 240px">
+                </div>
+
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-12 mb-4 text-center justify-content-center">
+
+                <!--Content-->
+                <div class="">
+                    <h2 class="font-weight-bold" style="color: #1c2a48">{{seller.username}}</h2>
+                    <h5 class="mb-5 m-1 text-warning"><i class="fas fa-map-marker-alt"></i>
+                        <b class="small text-dark ml-2">{{seller.location}}</b></h5>
+                </div>
+            </div>
+            <div class="col-md-12 mb-4 d-flex justify-content-center">
+                <div class="text">
+                    <div class="card text-white bg-dark mb-3" style="width: 20rem;">
+                        <div class="card-body  ">
+                            <!--<h5 class="card-title">Warning card title</h5>-->
+                            <p class="card-text text-white">
+                                <i class="fas fa-phone fa-rotate-90 warning-ic mr-5"></i><b>{{seller.phone}}</b>
+                            </p>
+                            <p class="card-text text-white">
+                                <i class="fas fa-envelope  warning-ic mr-5"></i> <b>{{seller.email}}</b>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</main>
+{% endblock %}

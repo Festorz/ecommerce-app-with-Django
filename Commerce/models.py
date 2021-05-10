@@ -33,17 +33,17 @@ class PostManager(models.Manager):
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, username, email, phone, fullname, profile_picture, password, location):
+    def create_user(self, username, email, phone, location, fullname, password):
         email = self.normalize_email(email)
-        user = self.model(username=username, email=email, phone=phone, fullname=fullname,
-                          profile_picture=profile_picture, location=location)
+        user = self.model(username=username, email=email, phone=phone, fullname=fullname, location=location
+                          )
         user.set_password(password)
         user.save(using=self.db)
         return user
 
-    def create_superuser(self, username, email, phone, password, location, fullname=None, profile_picture=None):
-        user = self.create_user(username=username, email=email, phone=phone, fullname=fullname, password=password,
-                                profile_picture=profile_picture, location=location)
+    def create_superuser(self, username, email, phone, location, password, fullname=None):
+        user = self.create_user(username=username, email=email, phone=phone, fullname=fullname, location=location,
+                                password=password)
         user.is_superuser = True
         user.is_staff = True
         user.save()
@@ -54,13 +54,13 @@ class User(PermissionsMixin, AbstractBaseUser):
     username = models.CharField(max_length=32, unique=True, )
     email = models.EmailField(max_length=32)
     phone = models.CharField(max_length=13, blank=False)
+    location = models.CharField(max_length=100, blank=False)
     fullname = models.CharField(max_length=70, blank=True, null=True)
     profile_picture = models.ImageField(upload_to='profile', default='')
-    location = models.CharField(max_length=100, blank=False)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-    REQUIRED_FIELDS = ["email", "phone"]
+    REQUIRED_FIELDS = ["email", "phone", 'location']
     USERNAME_FIELD = "username"
     objects = UserManager()
 

@@ -41,6 +41,8 @@ class RegistrationForm(UserCreationForm):
             'email',
             'fullname',
             'phone',
+            'location',
+            'profile_picture',
             'password1',
             'password2'
         )
@@ -48,6 +50,7 @@ class RegistrationForm(UserCreationForm):
     def save(self, commit=True):
         user = super(RegistrationForm, self).save(commit=False)
         user.phone = self.cleaned_data['phone']
+        user.phone = self.cleaned_data['location']
         user.email = self.cleaned_data['email']
         user.fullname = self.cleaned_data['fullname']
 

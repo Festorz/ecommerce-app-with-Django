@@ -136,11 +136,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Ecommerce/media')
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "staticfiles")]
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static-cdn-local")
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
